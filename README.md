@@ -1,45 +1,53 @@
 # 📰 Analisis Sentimen Berita Kesehatan Berbahasa Indonesia
 
-Proyek Data Mining dan Natural Language Processing (NLP) untuk menganalisis sentimen berita kesehatan berbahasa Indonesia menggunakan data hasil web scraping.
-
-Proyek mencakup proses pengumpulan data, preprocessing teks, analisis sentimen berbasis lexicon, serta visualisasi hasil analisis.
+Pipeline **Data Mining dan Natural Language Processing (NLP)** untuk mengumpulkan, membersihkan, dan menganalisis sentimen berita kesehatan berbahasa Indonesia menggunakan data hasil **web scraping dari Liputan6**.
 
 ---
 
-## 🎯 Tujuan Proyek
+## 📌 Ringkasan Proyek
 
-Proyek ini bertujuan untuk:
+Proyek ini membangun pipeline analisis teks dari tahap pengumpulan data hingga interpretasi hasil.
 
-- Mengumpulkan data berita kesehatan melalui web scraping.
-- Membersihkan dan mempersiapkan data teks untuk analisis.
-- Menganalisis sentimen berita menjadi kategori positif dan negatif.
-- Mengidentifikasi kata dan frasa yang sering muncul pada masing-masing sentimen.
-- Menyajikan hasil analisis melalui visualisasi yang mudah dipahami.
+Data berita kesehatan dikumpulkan melalui **web scraping**, kemudian diproses melalui beberapa tahapan preprocessing, yaitu:
 
----
+- Data cleaning
+- Penghapusan data duplikat
+- Case folding
+- Normalisasi kata
+- Tokenization
+- Stopword removal
+- Stemming
 
-## 📊 Dataset
+Setelah data siap dianalisis, digunakan pendekatan **lexicon-based sentiment analysis** untuk mengidentifikasi kecenderungan sentimen setiap artikel.
 
-Data dikumpulkan melalui proses web scraping berita kesehatan berbahasa Indonesia.
-
-Jumlah data awal:
-
-- **5.000 artikel berita**
-
-Setelah proses pembersihan dan penghapusan data duplikat, diperoleh data yang digunakan untuk analisis sentimen.
+Hasil analisis kemudian divisualisasikan menggunakan distribusi sentimen, word cloud, serta analisis bigram dan trigram.
 
 ---
 
-## 🔄 Alur Analisis
+## 🎯 Tujuan
+
+- Mengotomatisasi pengumpulan berita kesehatan melalui web scraping.
+- Membersihkan dan menyiapkan data teks untuk analisis.
+- Mengidentifikasi kecenderungan sentimen menggunakan pendekatan berbasis leksikon.
+- Menemukan kata dan frasa yang dominan pada berita.
+- Menyajikan hasil analisis dalam visualisasi yang mudah dipahami.
+
+---
+
+## 🔄 Alur Pemrosesan
 
 ```text
 Web Scraping
      ↓
+Data Collection
+     ↓
 Data Cleaning
+     ↓
+Remove Duplicate Data
      ↓
 Case Folding
      ↓
-Normalisasi Kata
+Word Normalization
      ↓
 Tokenization
      ↓
@@ -49,4 +57,6 @@ Stemming
      ↓
 Lexicon-Based Sentiment Analysis
      ↓
-Visualisasi & Interpretasi
+Data Visualization
+     ↓
+Interpretation
